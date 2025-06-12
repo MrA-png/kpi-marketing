@@ -7,13 +7,13 @@
 		<thead>
 			<tr>
 				<th rowspan="2">Nama</th>
-				<th colspan="6" class="sales-header">Sales</th>
-				<th colspan="6" class="report-header">Report</th>
+				<th colspan="7" class="sales-header">Sales</th>
+				<th colspan="7" class="report-header">Report</th>
 				<th rowspan="2" class="kpi-header">KPI</th>
 			</tr>
 			<tr>
-				<th>Target</th><th>Actual</th><th>Pencapaian</th><th>Bobot</th><th>Late</th><th>Total</th>
-				<th>Target</th><th>Actual</th><th>Pencapaian</th><th>Bobot</th><th>Late</th><th>Total</th>
+				<th>Target</th><th>Actual</th><th>Pencapaian</th><th>Bobot</th><th>Late</th><th>Late min(-)</th><th>Total</th>
+				<th>Target</th><th>Actual</th><th>Pencapaian</th><th>Bobot</th><th>Late</th><th>Late min(-)</th><th>Total</th>
 			</tr>
 		</thead>
 		<tbody>
@@ -25,12 +25,14 @@
 					<td>{item.sales_pencapaian}</td>
 					<td>{item.bobot_sales}</td>
 					<td>{item.late_sales}</td>
+					<td>{item.late_sales_minus}</td>
 					<td>{item.total_bobot_sales}</td>
 					<td>{item.target_report}</td>
 					<td>{item.actual_report}</td>
 					<td>{item.report_pencapaian}</td>
 					<td>{item.bobot_report}</td>
 					<td>{item.late_report}</td>
+					<td>{item.late_report_minus}</td>
 					<td>{item.total_bobot_report}</td>
 					<td>{item.total_kpi}</td>
 				</tr>
@@ -45,13 +47,22 @@
 		border-collapse: collapse;
 		font-size: 14px;
 	}
-	th, td {
+	th,
+	td {
 		border: 1px solid #ccc;
 		padding: 4px 8px;
 		text-align: center;
 	}
-	th { background-color: #f4f4f4; }
-	.sales-header { background-color: #dbeafe; }
-	.report-header { background-color: #fee2e2; }
-	.kpi-header { background-color: #fef9c3; }
+	th {
+		background-color: #f4f4f4;
+	}
+	.sales-header {
+		background-color: #dbeafe;
+	}
+	.report-header {
+		background-color: #fee2e2;
+	}
+	.kpi-header {
+		background-color: #fef9c3;
+	}
 </style>

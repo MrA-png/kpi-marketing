@@ -1,4 +1,4 @@
 <script>
 	import { goto } from '$app/navigation';
-	goto('/kpi-marketing');
+	goto('/data-kpi');
 </script>
