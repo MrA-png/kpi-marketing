@@ -1,38 +1,55 @@
-# sv
+# 📊 Svelte KPI Dashboard
 
-Everything you need to build a Svelte project, powered by [`sv`](https://github.com/sveltejs/cli).
+**Svelte KPI Dashboard** is a modern and responsive dashboard application built with [SvelteKit](https://kit.svelte.dev/). It provides a clean interface to display marketing KPI (Key Performance Indicator) data through interactive tables and donut charts.
 
-## Creating a project
+---
 
-If you're seeing this, you've probably already done this step. Congrats!
+## 🚀 Features
 
-```bash
-# create a new project in the current directory
-npx sv create
+- 📈 **Donut Chart Visualization**  
+  Displays task performance categorized as `On Time` and `Late` using Chart.js.
 
-# create a new project in my-app
-npx sv create my-app
+- 📋 **KPI Data Table**  
+  Tabular view of task details such as employee name, KPI category, deadlines, and actual dates.
+
+- 🔍 **Live Search**  
+  Instantly filter records by employee name.
+
+- 🎨 **Modern UI**  
+  Clean, minimalist interface with Lucide icons and Tailwind styling (if used).
+
+- 🛡️ **Offline-Ready Fallback**  
+  If the data fetch from the backend fails, the app gracefully loads predefined internal fallback data.
+
+---
+
+##⚙️ Requirements
+
+Node.js v18 or higher
+
+
+## 📁 Project Structure
+  ```plainteks
+src/
+├── components/
+│   ├── chart/
+│   └── table/
+├── lib/
+│   └── data/
+├── pages/                  
+├── routes/
+│   └── +page.svelte         
+static/                     
 ```
 
-## Developing
+---
 
-Once you've created a project and installed dependencies with `npm install` (or `pnpm install` or `yarn`), start a development server:
+## ⚙️ Getting Started
 
-```bash
-npm run dev
+1. **Clone the repository**
 
-# or start the server and open the app in a new browser tab
-npm run dev -- --open
-```
-
-## Building
-
-To create a production version of your app:
-
-```bash
-npm run build
-```
-
-You can preview the production build with `npm run preview`.
-
-> To deploy your app, you may need to install an [adapter](https://svelte.dev/docs/kit/adapters) for your target environment.
+   ```bash
+   git clone https://github.com/your-username/svelte-kpi-dashboard.git
+   cd svelte-kpi-dashboard
+   npm install
+   npm run dev
